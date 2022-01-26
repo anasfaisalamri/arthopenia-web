@@ -1,0 +1,297 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 50px;
+}
+
+/* Title */
+.title h3 {
+  margin-top: -12px;
+}
+
+.title-checkout h3 {
+  margin-top: 200px;
+}
+
+/* About */
+.about {
+  margin: 0px 20px;
+}
+
+.about h1 {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Pilih Desain */
+.desain {
+  margin-top: 100px;
+}
+
+.card-img-overlay:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.desain img {
+  border-radius: 20px;
+}
+
+.desain .card-overlay {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.desain a:hover .card-overlay {
+  opacity: 1;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card a:hover img {
+  opacity: 0.3;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+/* Penjelasan Paket */
+.penjelasan h3 {
+  margin-top: 75px;
+}
+
+/* Services  */
+.services i {
+  font-size: 100px;
+}
+
+/* portfolio */
+.portfolio {
+  margin-top: 100px;
+}
+
+.portfolio .zoom a img:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+
+.portfolio .zoom img {
+  border-radius: 20px;
+}
+
+/* overlay */
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.8s;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay:target img {
+  animation: Fade 0.4s;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  font-size: 3em;
+  margin-left: -15px;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: slideDownFade 0.5s 0.5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+  animation: Fade 0.5s 0.5s forwards;
+}
+
+/* navigasi */
+.overlay .next,
+.prev {
+  font-size: 2em;
+  opacity: 0;
+}
+
+.overlay .prev {
+  position: absolute;
+  top: 70%;
+  left: 42%;
+}
+
+.overlay .next {
+  position: absolute;
+  top: 70%;
+  right: 42%;
+}
+
+/* animasi */
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+/* utility */
+.bg-white {
+  background-color: #fff;
+}
+.text-gold {
+  color: rgb(255, 217, 0);
+}
+
+.btn-50 {
+  background-color: #c4c4c4;
+  border-radius: 50px;
+  color: black;
+  font-weight: 700;
+}
+
+.btn-50:hover {
+  background-color: gold;
+  border-radius: 50px;
+  color: black;
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  /* Title */
+  .title a {
+    font-size: 18px;
+  }
+
+  /* Services */
+  .services i {
+    font-size: 70px;
+  }
+
+  .services h5 {
+    font-size: 16px;
+  }
+
+  /* Desain */
+
+  .desain .card h5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 430px) {
+  .overlay img {
+    max-height: 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .overlay .prev {
+    position: absolute;
+    top: 65%;
+    left: 42%;
+  }
+
+  .overlay .next {
+    position: absolute;
+    top: 65%;
+    right: 42%;
+  }
+
+  .overlay .close {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    font-size: 3em;
+    margin-left: -15px;
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay img {
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .overlay .prev {
+    position: absolute;
+    top: 83%;
+    left: 42%;
+  }
+
+  .overlay .next {
+    position: absolute;
+    top: 83%;
+    right: 42%;
+  }
+}
+
+@media (min-width: 850px) {
+  .overlay img {
+    max-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .overlay .prev {
+    position: absolute;
+    top: 90%;
+    left: 42%;
+  }
+
+  .overlay .next {
+    position: absolute;
+    top: 90%;
+    right: 42%;
+  }
+}
